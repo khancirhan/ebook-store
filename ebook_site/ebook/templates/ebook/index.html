@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block content %} 
+  <div class="showcase">
+    <h1 class="showcase-heading display-4">Welcome to EBook Store</h1>
+
+    <div class="search-box">
+      <form action="{% url 'ebook:search' %}" method="GET">
+        <input name="search" class="search-field" type="input" placeholder="Search..." />
+        <button class="search-btn" href="" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <section class="main">
+    <div class="container">
+      <h1 class="main-heading uppercase mt-2 mb-4">Subjects</h1>
+
+      <div class="row">
+
+          {% for subject in subjects %}
+
+            <div class="col-lg-4 col-md-6">
+              <div class="sub-card">
+                <div class="sub-head">
+                  <img class="sub-img" src="{% static 'ebook/img/book-icon.svg' %}" alt="" />
+
+                  <h4 class="sub-title">{{ subject.title }}</h4>
+                </div>
+                <a href="{% url 'ebook:ebooks' 0 subject.id %}" class="btn btn-primary btn-block"
+                  >E-Book</a
+                >
+                <a href="{% url 'ebook:ebooks' 1 subject.id %}" class="btn btn-secondary btn-block"
+                  >Notes</a
+                >
+              </div>
+            </div>
+
+          {% endfor %}
+          
+      </div>
+
+      <div class="view-more">
+        <a href="{% url 'ebook:subjects' %}" class="btn btn-primary px-4 py-2"
+          >View all Subjects <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

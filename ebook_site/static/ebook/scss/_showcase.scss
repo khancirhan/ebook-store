@@ -1,0 +1,68 @@
+// showcase
+.showcase,
+.showcase-secondary {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background: rgba($primary-color, 0.8);
+  padding: 10px;
+
+  .showcase-heading {
+    color: $light-color;
+  }
+
+  .showcase-subheading {
+    color: grey;
+  }
+
+  // search box container
+  .search-box {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+
+    .search-field {
+      width: 100%;
+      border: 2px solid lighten($primary-color, 10);
+      outline: none;
+      font-size: 1rem;
+      padding: 10px 20px;
+      padding-right: 60px;
+      border-radius: 30px;
+
+      &:focus {
+        border: 2px solid $secondary-color;
+        box-shadow: 0px 1px 8px $secondary-color;
+        transition: all 0.3s ease;
+      }
+    }
+
+    // search button
+    .search-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      font-size: 1.3rem;
+      color: $primary-color;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      &:hover {
+        color: $secondary-color;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+// set size of secondary showcase
+.showcase-secondary {
+  height: $showcase2-height;
+}

@@ -1,0 +1,295 @@
+.navbar {
+  background: white;
+  color: black;
+  min-height: 55px;
+  box-shadow: 1px 1px 50px rgba(202, 202, 202, 0.6); }
+  .navbar .navbar-brand {
+    font-weight: 800;
+    margin-right: 50px; }
+    .navbar .navbar-brand .main-brand {
+      color: #505cfd; }
+  .navbar .fas.fa-bars {
+    color: black; }
+    .navbar .fas.fa-bars:hover {
+      color: #00dbde;
+      transition: all 0.1s linear; }
+  .navbar .navbar-nav .nav-item {
+    margin-right: 20px; }
+    .navbar .navbar-nav .nav-item.active > .nav-link {
+      color: #00a9ab; }
+    .navbar .navbar-nav .nav-item .nav-link {
+      color: black;
+      font-weight: 500;
+      text-transform: uppercase; }
+      .navbar .navbar-nav .nav-item .nav-link:hover {
+        color: #00a9ab;
+        transition: all 0.1s ease; }
+
+.showcase,
+.showcase-secondary {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background: rgba(0, 219, 222, 0.8);
+  padding: 10px; }
+  .showcase .showcase-heading,
+  .showcase-secondary .showcase-heading {
+    color: white; }
+  .showcase .showcase-subheading,
+  .showcase-secondary .showcase-subheading {
+    color: grey; }
+  .showcase .search-box,
+  .showcase-secondary .search-box {
+    position: relative;
+    width: 500px;
+    margin: 0 auto; }
+    .showcase .search-box .search-field,
+    .showcase-secondary .search-box .search-field {
+      width: 100%;
+      border: 2px solid #12fcff;
+      outline: none;
+      font-size: 1rem;
+      padding: 10px 20px;
+      padding-right: 60px;
+      border-radius: 30px; }
+      .showcase .search-box .search-field:focus,
+      .showcase-secondary .search-box .search-field:focus {
+        border: 2px solid #505cfd;
+        box-shadow: 0px 1px 8px #505cfd;
+        transition: all 0.3s ease; }
+    .showcase .search-box .search-btn,
+    .showcase-secondary .search-box .search-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      font-size: 1.3rem;
+      color: #00dbde;
+      background-color: transparent;
+      border: none;
+      outline: none; }
+      .showcase .search-box .search-btn:hover,
+      .showcase-secondary .search-box .search-btn:hover {
+        color: #505cfd;
+        transition: all 0.3s ease; }
+
+.showcase-secondary {
+  height: 35vh; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
+  color: white;
+  height: 100px; }
+
+.btn-primary {
+  background-color: #00dbde;
+  border-color: #00dbde; }
+  .btn-primary:hover {
+    background-color: #00b3b5;
+    border-color: #00b3b5; }
+
+.btn-secondary {
+  background-color: #505cfd;
+  border-color: #505cfd; }
+  .btn-secondary:hover {
+    background-color: #2836fd;
+    border-color: #2836fd; }
+
+.pagination .page-link {
+  color: #00dbde; }
+.pagination .page-item.active > .page-link {
+  background: #00dbde;
+  border-color: #00dbde;
+  color: white; }
+
+.breadcrumb {
+  background: #505cfd; }
+  .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: '>';
+    color: #c4dce8; }
+  .breadcrumb .breadcrumb-item a {
+    color: white; }
+    .breadcrumb .breadcrumb-item a:hover {
+      color: #c4dce8; }
+  .breadcrumb .breadcrumb-item.active {
+    color: #c4dce8; }
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+body {
+  background: url("../img/showcase1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.main {
+  background: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  min-height: calc( 100vh - 55px - 35vh - 100px ); }
+  .main .main-heading {
+    text-align: center; }
+  .main .sub-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: bottom;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+    .main .sub-card .sub-head {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .main .sub-card .sub-head .sub-img {
+        height: 200px;
+        opacity: 0.8; }
+      .main .sub-card .sub-head .sub-title {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        position: absolute;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 5px;
+        padding: 10px;
+        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3); }
+    .main .sub-card:hover {
+      box-shadow: 0px 1px 10px rgba(0, 219, 222, 0.5);
+      transition: all 0.2s ease; }
+      .main .sub-card:hover .sub-title {
+        box-shadow: 0px 1px 15px rgba(0, 219, 222, 0.5);
+        transition: all 0.2s ease; }
+  .main .view-more {
+    display: block;
+    text-align: center; }
+    .main .view-more .btn-primary {
+      border-radius: 20px; }
+      .main .view-more .btn-primary .fa-arrow-right {
+        margin-left: 5px; }
+  .main .ebook-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    justify-content: space-evenly;
+    min-height: 80px; }
+    .main .ebook-card .ebook-img {
+      width: 100px;
+      height: 100%; }
+    .main .ebook-card .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: white;
+      padding: 10px; }
+      .main .ebook-card .card-body .heading .title {
+        font-size: 1.4rem;
+        font-weight: 650; }
+        .main .ebook-card .card-body .heading .title a {
+          text-decoration: none;
+          color: black; }
+      .main .ebook-card .card-body .heading .ebook-text-muted {
+        color: grey;
+        font-style: italic;
+        margin-bottom: 5px; }
+      .main .ebook-card .card-body .ebook-info {
+        color: #00dbde; }
+        .main .ebook-card .card-body .ebook-info .val {
+          margin-right: 5px; }
+    .main .ebook-card:hover {
+      box-shadow: 0px 1px 10px rgba(0, 219, 222, 0.5);
+      transition: all 0.2s ease; }
+  .main .subject {
+    padding: 5px;
+    height: 80vh;
+    overflow-y: auto; }
+    .main .subject .list-item {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .main .subject .list-item:last-child {
+        border-bottom: 0; }
+      .main .subject .list-item .icon {
+        margin-right: 15px; }
+      .main .subject .list-item:hover {
+        background: #f2f2f2; }
+      .main .subject .list-item.active {
+        color: #00dbde; }
+  .main .ebook-showcase {
+    display: flex;
+    flex-direction: column; }
+    .main .ebook-showcase .ebook-img-lg {
+      height: 100%;
+      width: 100%; }
+    .main .ebook-showcase .ebook-details {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 100%; }
+      .main .ebook-showcase .ebook-details .ebook-title {
+        font-size: 1.6rem;
+        font-weight: 650;
+        margin-bottom: 10px; }
+      .main .ebook-showcase .ebook-details .ebook-text-muted {
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-style: italic;
+        color: grey;
+        margin-bottom: 20px; }
+      .main .ebook-showcase .ebook-details .info {
+        margin-bottom: 10px; }
+        .main .ebook-showcase .ebook-details .info .val {
+          margin-left: 5px;
+          color: #00dbde; }
+      .main .ebook-showcase .ebook-details .btn {
+        margin-bottom: 10px; }
+
+@media screen and (max-width: 768px) {
+  body {
+    background: url("../img/showcase2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; }
+
+  .showcase .search-box, .showcase-secondary .search-box {
+    width: 400px; }
+
+  .showcase-secondary .showcase-heading {
+    font-size: 2rem; } }
+@media screen and (max-width: 576px) {
+  .showcase .search-box, .showcase-secondary .search-box {
+    width: 300px; }
+
+  .showcase-secondary .showcase-heading {
+    font-size: 1.9rem; }
+
+  .main .sub-card .sub-head .sub-title {
+    font-size: 1rem; }
+  .main .ebook-card .card-body .heading .title {
+    font-size: 1.1rem; }
+  .main .ebook-card .card-body .heading .ebook-text-muted {
+    font-size: 0.8rem; }
+  .main .ebook-info {
+    font-size: 0.7rem; } }
+
+/*# sourceMappingURL=style.css.map */

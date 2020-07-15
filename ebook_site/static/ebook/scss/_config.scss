@@ -1,0 +1,23 @@
+$light-color: white;
+$dark-color: black;
+$primary-color: #00dbde;
+$secondary-color: #505cfd;
+$navbar-height: 55px;
+$showcase2-height: 35vh;
+$footer-height: 100px;
+
+@mixin shadow {
+  box-shadow: 1px 1px 50px rgba(rgb(202, 202, 202), 0.6);
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

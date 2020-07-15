@@ -1,0 +1,51 @@
+// navbar
+.navbar {
+  background: $light-color;
+  color: $dark-color;
+  min-height: $navbar-height;
+  @include shadow();
+
+  // brand text
+  .navbar-brand {
+    font-weight: 800;
+    margin-right: 50px;
+
+    .main-brand {
+      color: $secondary-color;
+    }
+  }
+
+  // hamburger button
+  .fas.fa-bars {
+    color: $dark-color;
+
+    &:hover {
+      color: $primary-color;
+      transition: all 0.1s linear;
+    }
+  }
+
+  // navbar items
+  .navbar-nav {
+    .nav-item {
+      margin-right: 20px;
+
+      // change the color of the link when active class is added to nav-item
+      &.active > .nav-link {
+        color: darken($primary-color, 10);
+      }
+
+      // styling the links
+      .nav-link {
+        color: $dark-color;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &:hover {
+          color: darken($primary-color, 10);
+          transition: all 0.1s ease;
+        }
+      }
+    }
+  }
+}

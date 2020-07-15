@@ -1,0 +1,82 @@
+$light-color: white;
+$dark-color: black;
+$primary-color: #00dbde;
+$secondary-color: #505cfd;
+
+@mixin shadow {
+  box-shadow: 1px 1px 50px rgba(rgb(202, 202, 202), 0.6);
+}
+
+#header {
+  background: $light-color;
+  color: $dark-color;
+  min-height: 55px;
+  @include shadow();
+
+  #logo a {
+    color: $dark-color;
+
+    .navbar-brand {
+      font-weight: 800;
+      margin-right: 50px;
+  
+      .main-brand {
+        color: $secondary-color;
+      }
+    }
+  }
+  
+  #user-tools 
+  {
+    font-size: 0.8rem; 
+
+    a {
+      color: $dark-color;
+  
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+
+}
+
+div.breadcrumbs {
+  background: $secondary-color;
+}
+
+.dashboard #content {
+  .module {
+    caption, h2  {
+      background: darken($primary-color, 5);
+      color: $light-color;
+    }
+  }
+}
+
+
+#changelist-filter h2 {
+  background: darken($primary-color, 5);
+}
+
+.submit-row a.deletelink{
+  background: $secondary-color !important;
+  height: 35px !important;
+}
+
+.button, input[type=submit] {
+  background: $primary-color;
+
+  &:hover {
+    background: darken($primary-color, 10);
+  }
+}
+
+.submit-row input.default {
+  background: darken($primary-color, 10);
+
+  &:hover {
+    background: darken($primary-color, 20);
+  }
+}
+

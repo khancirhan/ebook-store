@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/all.min.css' %}"/>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'ebook/css/style.css' %}" />
+
+    <title>E Book store</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+    
+    <!-- Main content -->
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <!-- JQuery -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Footer date -->
+    <script src="{% static 'js/date.js' %}"></script>
+    {% block script %} {% endblock %}
+  </body>
+</html>

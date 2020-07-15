@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+
+{% load static %}
+
+{% block extrastyle %}
+  <link rel="stylesheet" href="{% static 'admin/css/admin.css' %}">
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"/>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}"/>
+{% endblock %}
+
+
+{% block branding %}
+  <h1 id="logo"><a href="{% url 'admin:index' %}"><span class="navbar-brand mb-0"><span class="main-brand">EBOOK</span>Store</span></a></h1>
+{% endblock %}
+
+

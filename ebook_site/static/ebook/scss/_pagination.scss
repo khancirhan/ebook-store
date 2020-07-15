@@ -1,0 +1,12 @@
+// pagination
+.pagination {
+  .page-link {
+    color: $primary-color;
+  }
+
+  .page-item.active > .page-link {
+    background: $primary-color;
+    border-color: $primary-color;
+    color: $light-color;
+  }
+}

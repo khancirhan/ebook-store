@@ -1,0 +1,80 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+  <div class="showcase-secondary">
+    <h2 class="showcase-heading display-4">{{ ebook.title }}</h2>
+    {% if ebook.authors.all %} 
+      <h5 class="showcase-subheading">by   
+          {% for author in ebook.authors.all %}
+            {{ author.name }}
+          {% endfor %}  
+      </h5>
+    {% endif %}
+  </div>
+
+  <section class="main">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'ebook:index' %}">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'ebook:ebooks' ebook.category 0 %}">
+                Browse 
+                {% if ebook.category == 0 %} 
+                  E-Books 
+                {% else %}
+                  Notes
+                {% endif %}
+            </a> 
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            COA
+          </li>
+        </ol>
+      </nav>
+
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 mt-3">
+
+          <div class="ebook-showcase">
+            <div class="row">
+              <div class="col-md-6">
+                <img
+                  class="ebook-img-lg"
+                  src="{{ ebook.thumbnail.url }}"
+                  alt="{{ ebook.title }}"
+                />
+              </div>
+              <div class="col-md-6">
+                <div class="ebook-details">
+                  <h2 class="ebook-title">
+                      {{ ebook.title }}
+                  </h2>
+                  <h5 class="ebook-text-muted"> 
+                    {% if ebook.authors.all %} 
+                      {% for author in ebook.authors.all %}
+                        {{ author.name }}
+                      {% endfor %}
+                    {% endif %}
+                    {% if ebook.description %}
+                      {{ ebook.description }}  
+                    {% endif %}
+                  </h5>  
+                  <div class="info">
+                    Uploaded: <span class="val">{{ ebook.date }}</span>
+                  </div>
+                  <div class="info">Size: <span class="val">{{ ebook.file.size }} MB</span></div>
+                  <div class="info">Pages: <span class="val">206</span></div>
+
+                  <a href="{% url 'ebook:preview' ebook.id %}" class="btn btn-primary">Open</a>
+                  <a href="{% url 'ebook:download' ebook.id %}" class="btn btn-secondary">Download</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+{% endblock %}

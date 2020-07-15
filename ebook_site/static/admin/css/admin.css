@@ -1,0 +1,42 @@
+#header {
+  background: white;
+  color: black;
+  min-height: 55px;
+  box-shadow: 1px 1px 50px rgba(202, 202, 202, 0.6); }
+  #header #logo a {
+    color: black; }
+    #header #logo a .navbar-brand {
+      font-weight: 800;
+      margin-right: 50px; }
+      #header #logo a .navbar-brand .main-brand {
+        color: #505cfd; }
+  #header #user-tools {
+    font-size: 0.8rem; }
+    #header #user-tools a {
+      color: black; }
+      #header #user-tools a:hover {
+        color: #00dbde; }
+
+div.breadcrumbs {
+  background: #505cfd; }
+
+.dashboard #content .module caption, .dashboard #content .module h2 {
+  background: #00c2c5;
+  color: white; }
+
+#changelist-filter h2 {
+  background: #00c2c5; }
+
+.submit-row a.deletelink {
+  background: #505cfd !important;
+  height: 35px !important; }
+
+.button, input[type=submit] {
+  background: #00dbde; }
+  .button:hover, input[type=submit]:hover {
+    background: #00a9ab; }
+
+.submit-row input.default {
+  background: #00a9ab; }
+  .submit-row input.default:hover {
+    background: #007678; }

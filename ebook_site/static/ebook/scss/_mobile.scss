@@ -1,0 +1,59 @@
+@include mediaMd {
+
+  body {
+    background: url("../img/showcase2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .showcase, .showcase-secondary {
+    .search-box {
+      // change the width of the searchbar
+      width: 400px;
+    }
+  } 
+
+  .showcase-secondary {
+    .showcase-heading {
+      font-size: 2rem;
+    }    
+  } 
+}
+
+@include mediaSm {
+  .showcase, .showcase-secondary {
+    .search-box {
+      // change the width of the searchbar
+      width: 300px;
+    }
+  } 
+
+  .showcase-secondary {
+    .showcase-heading {
+      font-size: 1.9rem;
+    }    
+  } 
+
+  .main {
+    .sub-card .sub-head .sub-title {
+      font-size: 1rem;
+    }
+
+    .ebook-card .card-body {
+      .heading {
+        .title {
+          font-size: 1.1rem;
+        }
+  
+        .ebook-text-muted{
+          font-size: 0.8rem;
+        }
+      } 
+    }
+
+    .ebook-info {
+      font-size: 0.7rem;
+    }
+  } 
+}

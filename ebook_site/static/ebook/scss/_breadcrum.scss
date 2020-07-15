@@ -1,0 +1,24 @@
+.breadcrumb {
+  background: $secondary-color;
+
+  .breadcrumb-item {
+    &+.breadcrumb-item::before {
+      content: '>';
+      color: #c4dce8;
+    }
+
+    a {
+      color: $light-color;
+
+      &:hover {
+        color: #c4dce8;
+      }
+    }
+
+    &.active {
+      color: #c4dce8;
+    }
+  }
+}
+
+
